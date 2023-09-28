@@ -29,11 +29,11 @@ $nome_cartella=trim(utf8_decode($_POST["nome_cartella"]));
 $nome_pdf=trim(utf8_decode($_POST["nome_pdf"]));
 
 /**
- * Set the maximum execution time to 5 minutes (300 seconds).
+ * Set the maximum execution time to 15 minutes (900 seconds).
  * We can flexibly adjust it to fit our need. If we need unlimited time,
  * just set it to 0 but be carefull there will be performance impact.
  */
-set_time_limit(300);
+set_time_limit(900);
 
 // Total processes
 $total = intval($pagina_a)-intval($pagina_da);
@@ -102,7 +102,7 @@ else{
          flush();
 
          // Sleep one second so we can see the delay
-         sleep(1);
+         sleep(0.5);
          
          // Go next process
          $j=$j+1;
@@ -181,8 +181,8 @@ else{
          // Send output to browser immediately
          flush();
 
-         // Sleep one second so we can see the delay
-         sleep(1);
+         // Sleep 0.5 seconds so we can see the delay
+         sleep(0.5);
          
          // Go next process
          $j=$j+1;
@@ -238,8 +238,8 @@ else{
          // Send output to browser immediately
          flush();
 
-         // Sleep one second so we can see the delay
-         sleep(1);
+         // Sleep 0.3 seconds so we can see the delay
+         sleep(0.3);
          
          // Go next process
          $j=$j+1;
